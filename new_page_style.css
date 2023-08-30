@@ -1,0 +1,211 @@
+@font-face {
+    font-family: "Rubik VariableFont_wght";
+    src: url("fonts/Rubik-VariableFont_wght.ttf");
+}
+
+body{
+    margin: 0%;
+    font-family: "Rubik VariableFont_wght";
+    font-weight: 100;
+    background-image: url(img/Logo_background.png);
+}
+.background{
+    background-color: black;
+    margin-bottom: 40px;
+}
+header{
+    max-width: 1920px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: auto;
+    padding: 10px 57px 10px 57px;
+}
+.logo img{
+    height: 80px;
+}
+.back_btn{
+    color: white;
+    display: flex;
+    font-size: 20px;
+    padding: 19px;
+    gap: 10px;
+    background-color: rgba(207, 0, 0, 1);
+    border: 2px solid rgba(121, 121, 121, 1);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.back_btn_content{
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+}
+
+.card_2{
+    background-color: black;
+    color: white;
+    margin: 0px 60px 0px 60px;
+    padding: 30px;
+    display: flex;
+    gap: 50px;
+}
+.image img{
+    max-width: 320px;
+    max-height: 460px;
+}
+.big_text{
+    font-size: 36px;
+}
+.small_text{
+    font-size: 24px;
+}
+
+.raiting{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+.stars img{
+    z-index: 2;
+    margin-left: 10px;
+    position: absolute;
+}
+.rate_points{
+    background-color: white;
+    z-index: 0;
+    height: 23px;
+    width: 254px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.rate_color{
+    background-color: rgba(235, 255, 0, 1);
+    z-index: 1;
+    height: 23px;
+}
+
+@media (max-width:950px){
+    .card_2{
+        margin: 0px 30px 0px 30px;
+        gap: 25px;
+    }
+    .image img{
+        max-width: 240px;
+        max-height: 345px;
+    }
+    .big_text{
+        font-size: 30px;
+    }
+    .small_text{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:715px){
+    .card_2{
+        margin: 0px 15px 0px 15px;
+        gap: 15px;
+    }
+    .image img{
+        max-width: 180px;
+        max-height: 258px;
+    }
+    .big_text{
+        font-size: 24px;
+    }
+    .small_text{
+        font-size: 16px;
+    }
+    header{
+        scale: 0.8;
+        padding: 10px 0px 10px 0px;
+    }
+    .raiting{
+        scale: 0.8;
+        margin-left: -50px;
+    }
+    .rate_points{
+        scale: 0.98;
+    }
+}
+
+@media (max-width:550px){
+    .card_2{
+        margin: 0px 5px 0px 5px;
+        gap: 15px;
+    }
+    .image img{
+        max-width: 135px;
+        max-height: 193.5px;
+    }
+    .big_text{
+        font-size: 18px;
+    }
+    .small_text{
+        font-size: 10px;
+    }
+    header{
+        scale: 0.6;
+    }
+    .logo{
+        margin-left: -70px;
+    }
+    .back_btn{
+        margin-right: -70px;
+    }
+    .raiting{
+        scale: 0.6;
+        margin-left: -60px;
+    }
+    .rate_points{
+        height: 21px;
+    }
+    .rate_points div{
+        height: 21px;
+    }
+    .stars img{
+        margin-top: -1px;
+    }
+}
+@media (max-width:415px){
+    .card_2{
+        margin-top: -30px;
+        gap: 10px;
+    }
+    .image img{
+        margin-left: -20px;
+        max-width: 100px;
+        max-height: 149.5px;
+    }
+    .big_text{
+        font-size: 14px;
+    }
+    .small_text{
+        font-size: 8px;
+    }
+    header{
+        scale: 0.6;
+    }
+    .logo{
+        margin-left: -70px;
+    }
+    .back_btn{
+        margin-right: -70px;
+    }
+
+    .raiting{
+        scale: 0.4;
+        margin-left: -80px;
+    }
+    .rate_points{
+        height: 21px;
+    }
+    .rate_points div{
+        height: 21px;
+    }
+    .stars img{
+        margin-top: -1px;
+    }
+}

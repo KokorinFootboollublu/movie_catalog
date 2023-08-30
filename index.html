@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог Фильмов</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="cards.js" defer></script>
+    <script src="settings.js" defer></script>
+</head>
+<body>
+    <div class="background">
+        <header>
+            <div class="logo">
+                <img src="img/Logo.svg" alt="">
+            </div>
+            <div class="search">
+                <input class="name_input" type="text" placeholder="Поиск фильмов в каталоге">
+                <div class="search_btn">
+                    <p class="search_btn_text">Поиск</p>
+                    <img src="img/lil_search.svg" alt="">
+                </div>
+            </div>
+            <div class="search_settings">
+                <div class="search_setting" id="setting_1">
+                    <p class="setting_p">Рейтинг</p>
+                    <img style="transform: rotate(-90deg);" src="img/arrow.svg" alt="">
+                </div>
+                <div class="search_setting" id="setting_2">
+                    <p class="setting_p">Жанр</p>
+                    <img style="transform: rotate(-90deg);" src="img/arrow.svg" alt="">
+                </div>
+                <div class="search_setting" id="setting_3">
+                    <p class="setting_p" id="lol">Возрастные ограничения</p>
+                    <img style="transform: rotate(-90deg);" src="img/arrow.svg" alt="">
+                </div>
+                <div class="search_setting" id="setting_4">
+                    <p class="setting_p">Год</p>
+                    <img style="transform: rotate(-90deg);" src="img/arrow.svg" alt="">
+                </div>
+                <div class="settings_reset">
+                    <p class="cancel">Сбросить</p>
+                </div>
+                <div class="settings_choose">
+                    <div style="width: 144px; margin-left: 16px; position: absolute; margin-top: -140px;" class="choose_list" id="raiting">
+                        <p class="option">Сначала лучшие</p>
+                        <p class="option">Сначала худшие</p>
+                    </div>
+                    <div style="width: 130px; margin-left: 162px; position: absolute; margin-top: -320px;" class="choose_list">
+                        <p class="option">Мультфильм</p>
+                        <p class="option">Комедия</p>
+                        <p class="option">Фантастика</p>
+                        <p class="option">Боевик</p>
+                        <p class="option">Детектив</p>
+                        <p class="option">Мелодрама</p>
+                        <p class="option">Драма</p>
+                        <p class="option">Документальный</p>
+                        <p class="option">Биографический</p>
+                        <p class="option">Триллер</p>
+                        <p class="option">Хоррор</p>
+                    </div>
+                    <div style="margin-left: 294px; position: absolute; margin-top: -200px;" class="choose_list" id="age">
+                        <p class="option">0+</p>
+                        <p class="option">6+</p>
+                        <p class="option">12+</p>
+                        <p class="option">16+</p>
+                        <p class="option">18+</p>
+                    </div>
+                    <div style="width: 100px; margin-left: 648px; position: absolute; margin-top: -121px;" class="choose_list">
+                        <input class="year_input" type="number" placeholder="Введите год" style="border: 2px solid rgba(121, 121, 121, 1); width: 97px; margin-top: -2px;">
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="main_card_center">
+        <div class="main_card">
+            <div class="main_card_description">
+                <p class="big_text">Круче некуда</p>
+                <p class="grey_text">В будущем битвы за нефть захватили весь мир. Когда 
+                    команда международных преступников захватывает 
+                    заложников, чтобы провернуть крупнейшее ограбление, 
+                    только два человека оказываются в силах остановить их. 
+                    Это два наемника по разные стороны конфликта, их план 
+                    совершенно безумен, но они должны прорваться через град 
+                    пуль и песчаные бури. Даже если терпеть друг друга не 
+                    могут.
+                </p>
+                <div class="genre_year">
+                    <p>Боевик, Комедия</p>
+                    <p>2023</p>
+                </div>
+                <div class="main_card_raiting">
+                    <div class="main_card_raiting_stars">
+                        <div class="main_card_raiting_color"></div>
+                        <img class="main_card_raiting_picture" src="img/Exclude.svg" alt="">
+                    </div>
+                    <p class="main_card_raiting_number">6.3</p>
+                </div>
+            </div>
+            <div class="video">
+                <video autoplay muted src="img/Круче некуда _ Трейлер _ В кино с 13 июля.mp4"></video>
+            </div>
+        </div>
+    </div>
+    <div class="catalog">
+        <p>Каталог фильмов</p>
+    </div>
+    <div class="cards">
+    </div>
+</body>
+</html>
