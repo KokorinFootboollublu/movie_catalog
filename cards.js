@@ -167,10 +167,9 @@ cards_info.forEach(element => {
                 </div>
                 <div class="raiting">
                     <div class="stars">
+                        <div style="width: ${200 * (element[4]/10)}px;" class="rate_color"></div>
+                        <div class="raiting_background_color"></div>
                         <img src="img/Exclude.svg" alt="">
-                        <div class="rate_points">
-                            <div style="width: ${254 * (element[4]/10)}px;" class="rate_color"></div>
-                        </div>
                     </div>
                     <div class="number">${element[4]}</div>
                 </div>

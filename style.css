@@ -230,31 +230,37 @@ header{
 .raiting{
     display: flex;
     align-items: center;
-    gap: 10px;
     margin-bottom: 10px;
     color: white;
 }
+.stars{
+    margin-left: 10px;
+    margin-bottom: 26px;
+}
 .stars img{
     z-index: 2;
-    margin-left: 10px;
+    width: 200px;
     position: absolute;
     transition: all 0.1s ease-in-out;
-}
-.rate_points{
-    background-color: white;
-    z-index: 0;
-    height: 23px;
-    width: 254px;
-    margin-bottom: 5px;
-    margin-left: 10px;
+    margin-top: -1px;
+    margin-left: -2px;
 }
 .rate_color{
+    position: absolute;
     background-color: rgba(235, 255, 0, 1);
     z-index: 1;
-    height: 23px;
+    height: 22px;
+}
+.raiting_background_color{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    z-index: 0;
+    width: 196px;
+    height: 22px;
 }
 .number{
     font-size: 20px;
+    margin-left: 210px;
 }
 
 .main_card_center{
@@ -267,17 +273,19 @@ header{
     display: flex;
     color: white;
     background-color: #000;
+    width: 1870px;
     align-items: center;
 }
 .main_card_description{
     display: flex;
     flex-direction: column;
     padding: 23px 121px 32px 48px;
-    max-width: 460px;
-    gap: 10px;
+    max-width: 602px;
+    font-size: 24px;
 }
 .big_text{
     font-size: 46px;
+    margin-bottom: 5px;
 }
 .grey_text{
     color: rgba(164, 164, 164, 1);
@@ -290,10 +298,9 @@ header{
     display: flex;
     align-items: center;
     gap: 16px;
+    margin-top: -5px;
 }
 .main_card_raiting_stars{
-    background-color: white;
-    height: 27px;
     margin-left: -5px;
 }
 .main_card_raiting_color{
@@ -303,10 +310,17 @@ header{
     height: 27px;
     width: 190px;
 }
+.main_card_raiting_background_color{
+    position: absolute;
+    background-color: white;
+    z-index: 0;
+    height: 27px;
+    width: 250px;
+}
 .main_card_raiting_picture{
     z-index: 2;
     position: relative;
-    height: 27px;
+    height: 30px;
 }
 .main_card_raiting_number{
     font-size: 25px;
@@ -322,6 +336,20 @@ header{
     width: 202px;
 }
 
+@media (max-width:1836px) {
+    .main_card{
+        width: none;
+    }
+    .main_card_description{
+        max-width: 480px;
+        font-size: 16px;
+        gap: 10px;
+    }
+    .big_text{
+        font-size: 46px;
+        margin-bottom: 20px;
+    }
+}
 @media (max-width:1766px) {
     header{
         scale: 0.8;
@@ -342,17 +370,6 @@ header{
         scale: 0.8;
         margin: -60px 0px -60px 0px;
     }
-    .main_card_raiting_picture{
-        margin-left: -1px;
-        margin-top: -1px;
-        height: 28px;
-    }
-    .main_card_raiting_stars{
-        height: 26px;
-    }
-    .main_card_raiting_color{
-        height: 26px;
-    }
 }
 @media (max-width:1583px) {
     .settings_reset p{
@@ -360,6 +377,10 @@ header{
     }
     .search_setting{
         height: 73px;
+    }
+    .main_card_raiting_picture{
+        margin-left: -1px;
+        margin-top: -1px;
     }
 }
 @media (max-width:1473px) {
@@ -420,23 +441,6 @@ header{
         margin-left: 8px;
         margin-bottom: 4px;
     }
-    .raiting{
-        scale: 0.8;
-        margin-left: -25px;
-    }
-    .stars img{
-        margin-left: 10px;
-        margin-top: -1.1px;
-    }
-    .rate_points{
-        height: 21px;
-        width: 253px;
-        margin-bottom: 5px;
-        margin-left: 10px;
-    }
-    .rate_color{
-        height: 21px;
-    }
     .number{
         font-size: 16px;
     }
@@ -494,24 +498,19 @@ header{
         margin-left: 6px;
         margin-bottom: 3px;
     }
-    .raiting{
-        scale: 0.6;
-        margin-left: -50px;
-    }
-    .stars img{
-        margin-left: 9.9px;
-    }
-    .rate_points{
-        height: 20px;
-        width: 253px;
-        margin-bottom: 5px;
-        margin-left: 10px;
-    }
-    .rate_color{
-        height: 20px;
-    }
     .number{
         font-size: 20px;
+    }
+
+    .raiting{
+        scale: 0.8;
+        margin-bottom: 10px;
+        margin-left: -25px;
+    }
+    .stars img{
+        margin-top: -2px;
+        margin-left: -1px;
+        height: 26px;
     }
 }
 @media (max-width:821px) {
@@ -559,26 +558,18 @@ header{
         margin-left: 5px;
         margin-bottom: 0px;
     }
+    .number{
+        font-size: 20px;
+    }
     .raiting{
-        scale: 0.4;
-        margin-left: -75px;
-        margin-top: -7px;
-        margin-bottom: -3px;
+        scale: 0.6;
+        margin-bottom: 0px;
+        margin-left: -45px;
     }
     .stars img{
-        margin-left: 9.9px;
-    }
-    .rate_points{
-        height: 20px;
-        width: 253px;
-        margin-bottom: 0px;
-        margin-left: 10px;
-    }
-    .rate_color{
-        height: 20px;
-    }
-    .number{
-        font-size: 24px;
+        margin-top: -2px;
+        margin-left: -1px;
+        height: 26px;
     }
 }
 @media (max-width:660px) {
@@ -624,24 +615,18 @@ header{
         margin-left: 4px;
     }
     .raiting{
-        scale: 0.3;
-        margin-left: -65px;
+        scale: 0.45;
+        margin-left: -52px;
         margin-top: -7px;
-        margin-bottom: -3px;
+        margin-bottom: -4px;
     }
     .stars img{
-        margin-left: 9.9px;
-    }
-    .rate_points{
-        height: 20px;
-        width: 253px;
-        margin-left: 10px;
-    }
-    .rate_color{
-        height: 20px;
+        margin-top: -2px;
+        margin-left: -2px;
+        height: 26px;
     }
     .number{
-        font-size: 26px;
+        font-size: 20px;
     }
 }
 @media (max-width:497px) {
@@ -687,23 +672,17 @@ header{
         margin-left: 3px;
     }
     .raiting{
-        scale: 0.2;
-        margin-left: -60px;
-        margin-top: -10px;
+        scale: 0.3;
+        margin-left: -53px;
+        margin-top: -7px;
         margin-bottom: -7px;
     }
     .stars img{
-        margin-left: 9.9px;
-    }
-    .rate_points{
-        height: 20px;
-        width: 253px;
-        margin-left: 10px;
-    }
-    .rate_color{
-        height: 20px;
+        margin-top: -2px;
+        margin-left: -2px;
+        height: 26px;
     }
     .number{
-        font-size: 30px;
+        font-size: 24px;
     }
 }

@@ -152,17 +152,9 @@ let cards_info_copy = [
 document.querySelectorAll(".card").forEach(element => {
     element.onmouseover = function(){
         element.style.transform = "scale(1.05)";
-        element.children[1].children[2].children[0].children[0].style.width = "257px"
-        element.children[1].children[2].children[0].children[0].style.marginLeft = "8px"
-        element.children[1].children[2].children[0].style.height = "30px"
-        element.children[1].children[2].children[0].children[1].style.height = "22px"
     }
     element.onmouseout = function(){
         element.style.transform = "scale(1)";
-        element.children[1].children[2].children[0].children[0].style.width = "256px"
-        element.children[1].children[2].children[0].children[0].style.marginLeft = "10px"
-        element.children[1].children[2].children[0].style.height = "30px"
-        element.children[1].children[2].children[0].children[1].style.height = "23px"
     }
 });
 
@@ -517,10 +509,9 @@ document.querySelector(".search_btn").onclick = function(){
                     </div>
                     <div class="raiting">
                         <div class="stars">
+                            <div style="width: ${200 * (element[4]/10)}px;" class="rate_color"></div>
+                            <div class="raiting_background_color"></div>
                             <img src="img/Exclude.svg" alt="">
-                            <div class="rate_points">
-                                <div style="width: ${254 * (element[4]/10)}px;" class="rate_color"></div>
-                            </div>
                         </div>
                         <div class="number">${element[4]}</div>
                     </div>
