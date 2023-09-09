@@ -242,6 +242,7 @@ document.querySelectorAll(".option").forEach(element =>{
         if(element.innerHTML == 'Сначала худшие' && options_array.includes('Сначала лучшие') == true){
             options_array.splice(options_array.indexOf(`Сначала лучшие`), 1);
         }
+        console.log(options_array);
         if(element.innerHTML == '0+'){
             if(options_array.includes('6+') == true){
                 options_array.splice(options_array.indexOf(`6+`), 1);
@@ -315,6 +316,7 @@ document.querySelectorAll(".option").forEach(element =>{
         if(options_array.includes(nothing) == true){
             options_array.splice(options_array.indexOf(nothing), 1);
         }
+        console.log(options_array);
     }
 });
 
@@ -327,6 +329,10 @@ let year_memory
 let name_memory
 let cards_arr = document.querySelectorAll(".card");
 document.querySelector(".search_btn").onclick = function(){
+    console.log(options_array);
+    if(options_array.includes("Сначала лучшие") == false || options_array.includes("Сначала худшие") == false){
+        raiting = undefined
+    }
     let year = document.querySelector(".year_input").value
     let name = document.querySelector(".name_input").value
     if(year != ""){
@@ -537,17 +543,9 @@ document.querySelector(".search_btn").onclick = function(){
     document.querySelectorAll(".card").forEach(element => {
         element.onmouseover = function(){
             element.style.transform = "scale(1.05)";
-            element.children[1].children[2].children[0].children[0].style.width = "257px"
-            element.children[1].children[2].children[0].children[0].style.marginLeft = "8px"
-            element.children[1].children[2].children[0].style.height = "30px"
-            element.children[1].children[2].children[0].children[1].style.height = "22px"
         }
         element.onmouseout = function(){
             element.style.transform = "scale(1)";
-            element.children[1].children[2].children[0].children[0].style.width = "256px"
-            element.children[1].children[2].children[0].children[0].style.marginLeft = "10px"
-            element.children[1].children[2].children[0].style.height = "30px"
-            element.children[1].children[2].children[0].children[1].style.height = "23px"
         }
     });
     });
@@ -563,6 +561,33 @@ document.querySelector(".settings_reset").onclick = function(){
     document.querySelectorAll("input").forEach(element => {
         element.value = ""
         sorted_cards = []
+        document.querySelector(".cards").innerHTML = ""
+        cards_info_copy.forEach(element => {
+            document.querySelector(".cards").innerHTML += `
+            <div class="card">
+                    <div class="img">
+                        <img  src="${element[0]}" alt="">
+                    </div>
+                    <div class="card_other">
+                        <div class="title">
+                            <p>${element[1]}</p>
+                        </div>
+                        <div class="description">
+                            <p class="genre">${element[2]}</p>
+                            <p class="age_restrictions">${element[3]}</p>
+                        </div>
+                        <div class="raiting">
+                            <div class="stars">
+                                <div style="width: ${200 * (element[4]/10)}px;" class="rate_color"></div>
+                                <div class="raiting_background_color"></div>
+                                <img src="img/Exclude.svg" alt="">
+                            </div>
+                            <div class="number">${element[4]}</div>
+                        </div>
+                    </div>
+                </div>
+                `
+        });
         options_array = []
         age = []
         age_spec = 0
